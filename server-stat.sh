@@ -1,7 +1,6 @@
 #!/bin/bash
 # server-stats.sh
-# ساده‌ترین مانیتورینگ برای بررسی عملکرد سرور
-
+# The simplest monitoring to check server performance
 echo "======================"
 echo " Server Performance Stats"
 echo "======================"
@@ -9,7 +8,7 @@ echo
 
 # --- CPU Usage ---
 echo ">>> CPU Usage:"
-# %idle از mpstat گرفته میشه و ازش %usage محاسبه می‌کنیم
+# %idle is taken from mpstat and we calculate %usage from it
 if command -v mpstat >/dev/null 2>&1; then
     cpu_idle=$(mpstat 1 1 | awk '/Average:/ && $12 ~ /[0-9.]+/ {print $12}')
     cpu_usage=$(echo "100 - $cpu_idle" | bc)
