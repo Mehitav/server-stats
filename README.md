@@ -1,3 +1,4 @@
 # Server Stats
 
-این پروژه یه اسکریپت ساده برای مانیتورینگ عملکرد سرور با استفاده از Bash هست.
+This project is a simple script for monitoring server performance using Bash.
+https://roadmap.sh/projects/server-stats
